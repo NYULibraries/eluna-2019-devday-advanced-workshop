@@ -12,9 +12,9 @@
       docker-compose build
       ```
 1. Run the container service
-```sh
-# The 'up' command will deploy an dependent services,
-# and run with the service's ports enabled and mapped to the host.
-docker-compose up web
-```
+      ```sh
+      # The 'up' command will deploy an dependent services,
+      # and run with the service's ports enabled and mapped to the host.
+      docker-compose up web
+      ```
 1. Navigate to `http://localhost:8003/primo-explore/search?vid=NYU` to see the basic VIEW up and running!
