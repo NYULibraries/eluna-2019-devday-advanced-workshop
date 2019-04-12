@@ -35,7 +35,7 @@ function getCas() {
 }
 
 function setUseScss(_useScss) {
-	this.useScss = _useScss;
+	useScss = _useScss;
 }
 
 function getUseScss() {

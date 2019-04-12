@@ -1,0 +1,7 @@
+{
+  "npmClient": "yarn",
+  "packages": [
+    "primo-explore/custom/*"
+  ],
+  "version": "1.0.0"
+}

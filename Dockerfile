@@ -1,12 +1,17 @@
-FROM node:6-alpine
+FROM node:8-alpine
 
 ENV INSTALL_PATH /app
 
-# Install essentials
-RUN apk update && apk add build-base git
+# Build-base: Pacakge/compilation Essentials
+# Git: for potential git-based NPM dependencies
+# Python: for node-sass
+RUN apk add --update --no-cache \
+  build-base \
+  git \
+  python
 
 # Install node_modules with yarn
-ADD package.json yarn.lock /tmp/
+COPY package.json yarn.lock /tmp/
 RUN cd /tmp && yarn install --frozen-lockfile --ignore-optional \
   && mkdir -p $INSTALL_PATH \
   && cd $INSTALL_PATH \
@@ -15,7 +20,12 @@ RUN cd /tmp && yarn install --frozen-lockfile --ignore-optional \
 
 WORKDIR $INSTALL_PATH
 
-ADD . .
+# Installs packages for any subdirectories
+COPY package.json yarn.lock lerna.json ./
+COPY ./primo-explore ./primo-explore
+RUN yarn lerna bootstrap
+
+COPY . .
 
 EXPOSE 8004 3001
 
