@@ -32,4 +32,8 @@ services:
     command: yarn create-package
     volumes:
     - ./primo-explore/custom:/app/primo-explore/custom/
-    - ./packages:/app/packages
+    - ./packages:/app/packages/
+    # Ensures only natively built modules are used
+    - /app/primo-explore/custom/NYU/node_modules/
+    - /app/primo-explore/custom/CENTRAL_PACKAGE/node_modules/
+
