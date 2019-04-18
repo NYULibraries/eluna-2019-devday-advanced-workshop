@@ -111,6 +111,15 @@ One common way of delivering and using other institutions' customizations is thr
         template: '<search-bar-sub-menu></search-bar-sub-menu>'
       });
       ```
+### Create a package
+
+Now, creating a package is as simple using a single command. And Docker containers will help guarrantee that your output is not going to be affected by variations in environment!
+
+```sh
+VIEW=[VIEW] docker-compose run create-package
+```
+
+For now, the `VIEW` value can be either `NYU` or `CENTRAL_PACKAGE`.
 
 ### Other local requirements
 
