@@ -77,15 +77,15 @@ One common way of delivering and using other institutions' customizations is thr
 1. To implement this in your running development instance, we can [follow the module's documentation](primo-explore-search-bar-sub-menu)
 
       ```js
-      # Imports the module
+      // Imports the module
       import 'primo-explore-search-bar-sub-menu';
 
-      # Defines the modules on the angular instance
+      // Defines the modules on the angular instance
       let app = angular.module('viewCustom', [
         'searchBarSubMenu',
       ]);
 
-      # Configures the modules
+      // Configures the modules
       app.constant('searchBarSubMenuItems', [{
           name: "Provide Feedback",
           description: "Provide Feedback",
@@ -106,7 +106,7 @@ One common way of delivering and using other institutions' customizations is thr
         }
       ]);
 
-      # 'Injects' the module
+      // 'Injects' the module
       app.component('prmSearchBarAfter', {
         template: '<search-bar-sub-menu></search-bar-sub-menu>'
       });
