@@ -17,9 +17,6 @@ services:
     - 3001:3001
     volumes:
     - ./primo-explore/custom:/app/primo-explore/custom/
-    # Ensures only natively built modules are used
-    - /app/primo-explore/custom/NYU/node_modules/
-    - /app/primo-explore/custom/CENTRAL_PACKAGE/node_modules/
 
   create-package:
     image: primo-explore-eluna-workshop
@@ -33,7 +30,3 @@ services:
     volumes:
     - ./primo-explore/custom:/app/primo-explore/custom/
     - ./packages:/app/packages/
-    # Ensures only natively built modules are used
-    - /app/primo-explore/custom/NYU/node_modules/
-    - /app/primo-explore/custom/CENTRAL_PACKAGE/node_modules/
-

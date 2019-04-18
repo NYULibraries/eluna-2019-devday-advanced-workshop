@@ -57,7 +57,7 @@
     "vinyl-source-stream": "1.1.0"
   },
   "engines": {
-    "node": ">=4.2"
+    "node": ">=8"
   },
   "repository": "https://github.com/ExLibrisGroup/primo-explore-devenv",
   "scripts": {

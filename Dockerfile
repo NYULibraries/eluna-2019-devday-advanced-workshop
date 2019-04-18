@@ -27,6 +27,6 @@ RUN yarn lerna bootstrap
 
 COPY . .
 
-EXPOSE 8004 3001
+EXPOSE 8003 3001
 
-CMD VIEW=${VIEW} PROXY_SERVER=${PROXY_SERVER} yarn start
+CMD yarn lerna bootstrap && VIEW=${VIEW} PROXY_SERVER=${PROXY_SERVER} yarn start
