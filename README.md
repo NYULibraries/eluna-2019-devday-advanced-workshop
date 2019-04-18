@@ -4,7 +4,7 @@
 
 ### Initial setup
 1. Download and Install [Docker Community Edition](https://www.docker.com/products/docker-engine) for your machine platform.
-1. Clone this repository: `git clone https://github.com/NYULibraries/eluna-2019-devday-advanced-workshop`
+1. Clone this repository: `git clone https://github.com/NYULibraries/eluna-2019-devday-advanced-workshop` (if you would like to make your own modifications, you can do so by forking the repository).
 1. With Docker running, build the Docker image.  
       ```sh
       # For a faster build, you can "pull" our copy of the image from a repository first
@@ -19,7 +19,7 @@
       ```
 1. Navigate to `http://localhost:8003/primo-explore/search?vid=NYU` to see the basic VIEW up and running!
 
-### Using volumes
+### Making changes using volumes
 
 Notice that in `docker-compose.yml` there is a `volumes` section defined for the `web` service. Here, your local directory is being mounted as a 'volume' to the container at the specified directory:
 
