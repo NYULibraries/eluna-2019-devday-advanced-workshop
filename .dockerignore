@@ -1,4 +1,5 @@
 node_modules
 primo-explore/custom/*/node_modules
+primo-explore/modules/**/*
 .*
 *.log
