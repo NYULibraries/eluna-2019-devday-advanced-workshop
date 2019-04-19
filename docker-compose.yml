@@ -8,7 +8,7 @@ services:
       cache_from:
       - primo-explore-eluna-workshop
       - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop
-    image: primo-explore-eluna-workshop
+    image: primo-explore-eluna-workshop-pt-2
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
       VIEW: NYU
@@ -20,7 +20,7 @@ services:
     - ./primo-explore/modules/primo-explore-custom-search-bar-sub-menu/dist:/app/primo-explore/modules/primo-explore-custom-search-bar-sub-menu/dist
 
   create-package:
-    image: primo-explore-eluna-workshop
+    image: primo-explore-eluna-workshop-pt-2
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
       VIEW: NYU
