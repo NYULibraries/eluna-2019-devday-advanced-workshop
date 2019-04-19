@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  test:
+    build:
+      context: .
+    command: yarn test --browsers=ChromiumHeadless_without_sandbox
+    image: eluna-primo-explore-custom-search-bar-sub-menu
+    volumes:
+    - ./src/:/app/src/
+  test-watch:
+    build:
+      context: .
+    command: yarn test --browsers=ChromiumHeadless_without_sandbox --single-run=false
+    image: eluna-primo-explore-custom-search-bar-sub-menu
+    volumes:
+    - ./src/:/app/src/
+  build:
+    build: .
+    command: yarn prepare
+    volumes:
+    - ./src/:/app/src/
+    - ./dist/:/app/dist/
+  build-watch:
+    build: .
+    command: yarn prepare --watch
+    volumes:
+    - ./src:/app/src
+    - ./dist:/app/dist

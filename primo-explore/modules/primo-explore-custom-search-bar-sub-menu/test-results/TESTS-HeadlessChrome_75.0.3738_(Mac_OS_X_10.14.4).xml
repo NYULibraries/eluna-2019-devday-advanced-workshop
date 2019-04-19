@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 75.0.3738 (Mac OS X 10.14.4)" package="" timestamp="2019-04-19T16:35:10" id="0" hostname="sysras16.bobst.nyu.edu" tests="8" errors="0" failures="0" time="0.036">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/75.0.3738.0 Safari/537.36"/>
+  </properties>
+  <testcase name="primoExploreCustomSearchBarSubMenu component buttons each button has the appropriate description" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu component">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu component icons prm-icon directives have appropriate svg-icon-set" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu component">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu component icons prm-icon directives gave appropriate icon-definition" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu component">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu component icons has two prm-icons" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu component">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu Controller $onInit assigns configuration backgroundColor to the controller.backgroundColor" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu Controller">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu Controller $onInit assigns configuration items to controller.items" time="0.002" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu Controller"/>
+  <testcase name="primoExploreCustomSearchBarSubMenu Controller clickLink opens the link in a new window" time="0" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu Controller">
+    <skipped/>
+  </testcase>
+  <testcase name="primoExploreCustomSearchBarSubMenu component buttons has two buttons" time="0.034" classname="HeadlessChrome_75_0_3738_(Mac_OS_X_10_14_4).primoExploreCustomSearchBarSubMenu component"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
