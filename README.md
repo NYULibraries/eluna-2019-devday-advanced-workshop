@@ -140,4 +140,13 @@ Recommended installation:
 
 * Google Chrome (latest version): Our section on end-to-end testing will use [cypress](https://www.cypress.io/), which utilizes Google Chrome for its testing GUI.
 
+# Pre-pull Docker images
 
+To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer
+
+```sh
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-4
+```
