@@ -2,3 +2,5 @@ node_modules
 primo-explore/custom/*/node_modules
 .*
 *.log
+docker-compose.yml
+Dockerfile

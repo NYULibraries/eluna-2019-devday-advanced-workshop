@@ -7,8 +7,9 @@ services:
       dockerfile: Dockerfile
       cache_from:
       - primo-explore-eluna-workshop
-      - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop
-    image: primo-explore-eluna-workshop
+      - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+      - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
+    image: primo-explore-eluna-workshop:pt-3
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
       VIEW: NYU
@@ -19,7 +20,7 @@ services:
     - ./primo-explore/custom:/app/primo-explore/custom/
 
   create-package:
-    image: primo-explore-eluna-workshop
+    image: primo-explore-eluna-workshop:pt-3
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
       VIEW: NYU
@@ -30,3 +31,13 @@ services:
     volumes:
     - ./primo-explore/custom:/app/primo-explore/custom/
     - ./packages:/app/packages/
+
+  e2e:
+    image: primo-explore-eluna-cypress
+    build:
+      cache_from:
+      - primo-explore-eluna-cypress
+      - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
+      context: ./e2e-cypress
+    depends_on:
+    - web

@@ -3,5 +3,7 @@
   "version": "1.0.0",
   "description": "This the NYU Consortium primo-explore view package.",
   "main": "js/main.js",
-  "dependencies": {}
+  "dependencies": {
+    "primo-explore-search-bar-sub-menu": "^1.0.7"
+  }
 }
