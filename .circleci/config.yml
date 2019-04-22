@@ -30,9 +30,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Pull Cache Image
+          name: Pull Cache Image and Build
           command: |
             docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+            docker-compose build web
       - run:
           name: Build asset VIEW package and store
           command: script/create_view_packages.sh
