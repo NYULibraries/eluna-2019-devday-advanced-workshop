@@ -12,7 +12,7 @@ services:
     image: primo-explore-eluna-workshop:pt-3
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
-      VIEW: NYU
+      VIEW: ${VIEW-NYU}
     ports:
     - 8003:8003
     - 3001:3001
@@ -23,7 +23,7 @@ services:
     image: primo-explore-eluna-workshop-pt-3
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
-      VIEW: NYU
+      VIEW: ${VIEW-NYU}
     ports:
     - 8003:8003
     - 3001:3001
@@ -43,5 +43,5 @@ services:
     - web
     environment:
       DOMAIN: http://web:8003/primo-explore/search
-      VIEW: NYU
+      VIEW: ${VIEW-NYU}
       CYPRESS_BASE_URL: http://web:8003/primo-explore/
