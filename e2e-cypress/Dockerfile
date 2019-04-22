@@ -9,9 +9,9 @@ RUN cd /tmp && yarn install --frozen-lockfile --ignore-optional \
   && cp -R /tmp/node_modules $INSTALL_PATH \
   && rm -r /tmp/* && yarn cache clean
 
-# WORKDIR ${INSTALL_PATH}
+WORKDIR ${INSTALL_PATH}
 
-# COPY . .
-# RUN yarn cypress verify
+COPY . .
+RUN yarn cypress verify
 
-# CMD /app/script/wait_for.sh $DOMAIN && yarn cypress run --spec="cypress/integration/$VIEW/**/*.spec.js"
+CMD /app/script/wait_for.sh $DOMAIN && yarn cypress run --browser=chrome --spec="cypress/integration/$VIEW/**/*.spec.js"
