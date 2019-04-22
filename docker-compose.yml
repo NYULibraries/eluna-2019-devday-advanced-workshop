@@ -44,3 +44,4 @@ services:
     environment:
       DOMAIN: http://web:8003/primo-explore/search
       VIEW: NYU
+      CYPRESS_BASE_URL: http://web:8003/primo-explore/
