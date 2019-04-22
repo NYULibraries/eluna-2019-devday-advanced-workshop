@@ -1,5 +1,5 @@
 node_modules
-primo-explore/custom/*/node_modules
+*/**/node_modules
 .*
 *.log
 docker-compose.yml
