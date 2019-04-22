@@ -3,18 +3,18 @@ docker-defaults: &docker-defaults
     - image: quay.io/nyulibraries/circleci_docker:18.06.3-dc-1.23.2-0
   working_directory: ~/app
 
-pull_docker: &pull_docker
-  run:
-    name: Pull Docker
-    command: |
-      script/pull_docker.sh
+# pull_docker: &pull_docker
+#   run:
+#     name: Pull Docker
+#     command: |
+#       script/pull_docker.sh
 
-push_docker: &push_docker
-  run:
-    name: Push Docker
-    command: |
-      docker login -u "$QUAY_USERNAME" -p "$QUAY_PASSWORD" quay.io
-      script/push_docker.sh
+# push_docker: &push_docker
+#   run:
+#     name: Push Docker
+#     command: |
+#       docker login -u "$QUAY_USERNAME" -p "$QUAY_PASSWORD" quay.io
+#       script/push_docker.sh
 
 version: 2
 jobs:
@@ -23,12 +23,10 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - <<: *pull_docker
       - run:
           name: Run View E2E Tests
           command: |
             script/run_view_e2e_tests.sh
-      - <<: *push_docker
       - store_artifacts:
           path: cypress-results
       - store_test_results:
@@ -39,7 +37,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - <<: *pull_docker
       - run:
           name: Build asset VIEW package and store
           command: script/create_view_packages.sh
