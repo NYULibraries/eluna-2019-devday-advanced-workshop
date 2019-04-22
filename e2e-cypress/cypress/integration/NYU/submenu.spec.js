@@ -23,7 +23,7 @@ describe('searchbar-submenu', () => {
       it(`has ${submenuItems.length} buttons`)
 
       submenuItems.forEach(({ label, link }, idx) => {
-        it(`has ${label} with link to ${link}`)
+        it(`has a button with ${label} which opens ${link} when clicked`)
       })
     })
   })
