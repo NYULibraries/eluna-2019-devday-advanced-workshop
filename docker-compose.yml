@@ -41,3 +41,6 @@ services:
       context: ./e2e-cypress
     depends_on:
     - web
+    environment:
+      DOMAIN: http://web:8003/primo-explore/search
+      VIEW: NYU
