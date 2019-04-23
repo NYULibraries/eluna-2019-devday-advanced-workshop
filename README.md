@@ -149,5 +149,5 @@ To speed up the setup of your docker image, you can pull prebuilt versions the i
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-4
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
 ```
