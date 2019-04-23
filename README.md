@@ -6,7 +6,7 @@
 1. Fork this repostory to your Github account
 1. Download and Install [Docker Community Edition](https://www.docker.com/products/docker-engine) for your machine platform.
 1. Clone this repository: `git clone https://github.com/[myuser]/eluna-2019-devday-advanced-workshop` (if you would like to make your own modifications, you can do so by forking the repository).
-1. With Docker running, build the Docker image.  
+1. With Docker running, build the Docker image.
       ```sh
       # For a faster build, you can "pull" our copy of the image from a repository first
       docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop
@@ -61,9 +61,9 @@ One common way of delivering and using other institutions' customizations is thr
       cd primo-explore/custom/NYU
       yarn add primo-explore-search-bar-sub-menu
       ```
-      
+
       You will then see the changes reflected in your `package.json` file!
-      
+
       ```js
       {
         "name": "primo-explore-nyu",
@@ -149,5 +149,5 @@ To speed up the setup of your docker image, you can pull prebuilt versions the i
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-4
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
 ```
