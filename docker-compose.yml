@@ -34,9 +34,9 @@ services:
     - 8003:8003
     - 3001:3001
     command: yarn create-package
-    volumes:
-    - ./primo-explore/custom:/app/primo-explore/custom/
-    - ./packages:/app/packages/
+    # volumes:
+    # - ./primo-explore/custom:/app/primo-explore/custom/
+    # - ./packages:/app/packages/
 
   e2e:
     build:
