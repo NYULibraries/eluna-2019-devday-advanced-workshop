@@ -19,6 +19,12 @@ services:
     # - ./primo-explore/custom:/app/primo-explore/custom/
 
   create-package:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+      - primo-explore-eluna-workshop
+      - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
     image: primo-explore-eluna-workshop
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
