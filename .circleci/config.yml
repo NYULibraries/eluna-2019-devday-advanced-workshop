@@ -11,10 +11,12 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Pull Cache Image
+          name: Pull Cache Image & Tag
           command: |
             docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
             docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
+            docker tag quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3 primo-explore-eluna-workshop-pt-4
+            docker tag quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e primo-explore-eluna-cypress
       - run:
           name: Run View E2E Tests
           command: |
@@ -30,10 +32,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Pull Cache Image and Build
+          name: Pull Cache Image & Tag
           command: |
             docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-            docker-compose build web
+            docker tag quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3 primo-explore-eluna-workshop-pt-4
       - run:
           name: Build asset VIEW package and store
           command: script/create_view_packages.sh
