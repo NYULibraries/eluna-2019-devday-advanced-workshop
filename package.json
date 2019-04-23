@@ -61,7 +61,7 @@
   },
   "repository": "https://github.com/ExLibrisGroup/primo-explore-devenv",
   "scripts": {
-    "start": "gulp run --browserify --useScss --view=${VIEW}",
-    "create-package": "gulp create-package --browserify --useScss --view=${VIEW}"
+    "start": "gulp run --browserify --useScss --view=$VIEW",
+    "create-package": "gulp create-package --browserify --useScss --view=$VIEW"
   }
 }
