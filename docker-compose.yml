@@ -16,8 +16,8 @@ services:
     ports:
     - 8003:8003
     - 3001:3001
-    volumes:
-    - ./primo-explore/custom:/app/primo-explore/custom/
+    # volumes:
+    # - ./primo-explore/custom:/app/primo-explore/custom/
 
   create-package:
     build:
@@ -39,12 +39,12 @@ services:
     - ./packages:/app/packages/
 
   e2e:
-    image: primo-explore-eluna-cypress
     build:
       context: ./e2e-cypress
       cache_from:
       - primo-explore-eluna-cypress
       - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
+    image: primo-explore-eluna-cypress
     depends_on:
     - web
     environment:
