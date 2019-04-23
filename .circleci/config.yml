@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Pull Cache Image
           command: |
-            docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+            docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
             docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
       - run:
           name: Run View E2E Tests
@@ -33,8 +33,7 @@ jobs:
       - run:
           name: Pull Cache Image & Tag
           command: |
-            docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-            docker tag quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3 primo-explore-eluna-workshop-pt-4
+            docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
       - run:
           name: Build asset VIEW package and store
           command: script/create_view_packages.sh
