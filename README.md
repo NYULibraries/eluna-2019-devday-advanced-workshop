@@ -6,15 +6,26 @@
 1. Fork this repostory to your Github account
 1. Download and Install [Docker Community Edition](https://www.docker.com/products/docker-engine) for your machine platform.
 1. Clone this repository: `git clone https://github.com/[myuser]/eluna-2019-devday-advanced-workshop` (if you would like to make your own modifications, you can do so by forking the repository).
-1. With Docker running, build the Docker image.
+
+### Pull Docker images
+
+To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer. This is highly recommended since docker images can take a long time to build, and we cannot guarrantee that these large images will be fast to download in the convention center.
+
+```sh
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
+```
+
+### Getting started in Docker
+1. With the Docker daemon running, build the Docker image.
       ```sh
-      # For a faster build, you can "pull" our copy of the image from a repository first
-      docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop
       docker-compose build
       ```
 1. Run the container service
       ```sh
-      # The 'up' command will deploy an dependent services,
+      # The 'up' command will deploy any dependent services,
       # and run with the service's ports enabled and mapped to the host.
       docker-compose up web
       ```
@@ -62,7 +73,7 @@ One common way of delivering and using other institutions' customizations is thr
       yarn add primo-explore-search-bar-sub-menu
       ```
 
-      You will then see the changes reflected in your `package.json` file!
+      You will then see the changes reflected in your `package.json` file (read with `cat package.json`)!
 
       ```js
       {
@@ -114,7 +125,7 @@ One common way of delivering and using other institutions' customizations is thr
       ```
 ### Create a package
 
-Now, creating a package is as simple using a single command. And Docker containers will help guarrantee that your output is not going to be affected by variations in environment!
+Now, creating a package is as simple using a single command. And Docker containers will help guarrantee that your output is not going to be effected by variations in environment!
 
 ```sh
 VIEW=[VIEW] docker-compose run create-package
@@ -122,25 +133,13 @@ VIEW=[VIEW] docker-compose run create-package
 
 For now, the `VIEW` value can be either `NYU` or `CENTRAL_PACKAGE`.
 
-
-### Pre-pull Docker images
-
-To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer
-
-```sh
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
-```
-
 ### CircleCi account
 
 Create an account at [circleci.com](https://circleci.com) using your Github account.
 
 ### Other local requirements
 
-In theory, everything that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`.
+Many applications that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`. We'll also need these dependencies locally installed in order to properly run the Cypress GUI.
 
 Recommended installation:
 * Node (>= version 8)
@@ -156,3 +155,4 @@ Recommended installation:
     ```
 
 * Google Chrome (latest version): Our section on end-to-end testing will use [cypress](https://www.cypress.io/), which utilizes Google Chrome for its testing GUI.
+* Try to make sure the Cypress GUI works: `yarn global add cypress`, `cypress verify`, and `cypress open`.
