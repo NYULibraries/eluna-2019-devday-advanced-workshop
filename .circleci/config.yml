@@ -20,6 +20,7 @@ jobs:
       - run:
           name: Run View E2E Tests
           command: |
+            docker-compose build web
             script/run_view_e2e_tests.sh
       - store_artifacts:
           path: cypress-results
