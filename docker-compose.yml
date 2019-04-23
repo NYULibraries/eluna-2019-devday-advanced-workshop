@@ -9,7 +9,7 @@ services:
       - primo-explore-eluna-workshop-pt-3
       - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
       - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
-    image: primo-explore-eluna-workshop:pt-3
+    image: primo-explore-eluna-workshop-pt-3
     environment:
       PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
       VIEW: ${VIEW-NYU}
