@@ -12,9 +12,7 @@
 To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer. This is highly recommended since docker images can take a long time to build, and we cannot guarrantee that these large images will be fast to download in the convention center.
 
 ```sh
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
 docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
 ```
 
