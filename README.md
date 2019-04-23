@@ -122,6 +122,22 @@ VIEW=[VIEW] docker-compose run create-package
 
 For now, the `VIEW` value can be either `NYU` or `CENTRAL_PACKAGE`.
 
+
+### Pre-pull Docker images
+
+To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer
+
+```sh
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
+docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
+```
+
+### CircleCi account
+
+Create an account at [circleci.com](https://circleci.com) using your Github account.
+
 ### Other local requirements
 
 In theory, everything that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`.
@@ -140,14 +156,3 @@ Recommended installation:
     ```
 
 * Google Chrome (latest version): Our section on end-to-end testing will use [cypress](https://www.cypress.io/), which utilizes Google Chrome for its testing GUI.
-
-# Pre-pull Docker images
-
-To speed up the setup of your docker image, you can pull prebuilt versions the images to your computer
-
-```sh
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-1
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-2
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:pt-3
-docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
-```
