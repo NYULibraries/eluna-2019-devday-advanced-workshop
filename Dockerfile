@@ -2,7 +2,7 @@ FROM node:8.16.0-alpine
 
 ENV INSTALL_PATH /app
 
-# Build-base: Pacakge/compilation Essentials
+# Build-base: Package/compilation Essentials
 # Git: for potential git-based NPM dependencies
 # Python: for node-sass
 RUN apk add --update --no-cache \
