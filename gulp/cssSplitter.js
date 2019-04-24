@@ -1,6 +1,5 @@
 'use strict';
 var through = require('through2');
-var applySourceMap = require('vinyl-sourcemaps-apply');
 let findIndex = require('lodash/findIndex');
 
 
