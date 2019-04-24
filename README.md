@@ -66,7 +66,7 @@ One common way of delivering and using other institutions' customizations is thr
       ```
       If successful, your terminal should look like this:
 
-      ```
+      ```sh
       /app #
       ```
 1. Navigate to the `NYU` directory and add the dependency with yarn.
@@ -78,7 +78,7 @@ One common way of delivering and using other institutions' customizations is thr
 
       You can confirm that the dependency has been installed in your `package.json` file, under dependencies!
 
-      ```
+      ```sh
       /app/primo-explore/custom/NYU # cat package.json
       
       {
