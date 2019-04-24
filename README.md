@@ -55,6 +55,7 @@ p {
   color: red;
 }
 ```
+During the workshop, we will be updating these files together and monitoring the changes live.
 
 ### CircleCI account
 
