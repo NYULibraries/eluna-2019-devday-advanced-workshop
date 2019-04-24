@@ -63,7 +63,9 @@ Create an account at [circleci.com](https://circleci.com) using your Github acco
 
 ### Other local requirements
 
-Many applications that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`. We'll also need these dependencies locally installed in order to properly run the Cypress GUI.
+-- this section is super confused/confusing. What will actually be done in the workshop: running things locally or in a Docker container? If locally, you should just include installation instructions. 
+
+Many applications that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version (???????). For better forward-compatibility, I have enforced a version requirement `>=8`. We'll also need these dependencies locally installed in order to properly run the Cypress GUI.
 
 Recommended installation:
 * Node (>= version 8)
