@@ -64,7 +64,7 @@ One common way of delivering and using other institutions' customizations is thr
       ```sh
       docker-compose run web sh # Opens a shell within the container
       ```
-If successful, your terminal should look like this:
+      If successful, your terminal should look like this:
 
       ```
       /app #
