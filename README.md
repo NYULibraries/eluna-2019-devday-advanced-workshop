@@ -5,7 +5,7 @@
 ### Initial setup
 1. Fork this repostory to your Github account
 1. Download and Install [Docker Community Edition](https://www.docker.com/products/docker-engine) for your machine platform.
-1. Clone this repository: `git clone https://github.com/[myuser]/eluna-2019-devday-advanced-workshop` (if you would like to make your own modifications, you can do so by forking the repository).
+1. Clone this repository: `git clone https://github.com/[myuser]/eluna-2019-devday-advanced-workshop`
 
 ### Pull Docker images
 
@@ -56,24 +56,31 @@ p {
 }
 ```
 
-### Adding an `npm` dependency
+### Installing a customization as an `npm` dependency
 
-One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations.
+One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations. The following steps will walk us through installing a customization that can be installed as an npm package.
 
-1. Ensure your `custom` folder is mounted as a volume, then open an Alpine shell process in the Docker container defined by the `web` service
+1. From the command line, open an Alpine shell process in the Docker container as defined by the `web` service. Ensure your `custom` folder is mounted as a volume.
       ```sh
       docker-compose run web sh # Opens a shell within the container
       ```
+      If successful, your terminal should look like this:
+
+      ```sh
+      /app #
+      ```
 1. Navigate to the `NYU` directory and add the dependency with yarn.
       ```sh
-      # Within the container...
-      cd primo-explore/custom/NYU
-      yarn add primo-explore-search-bar-sub-menu
+      # Within the container
+      /app # cd primo-explore/custom/NYU
+      /app # yarn add primo-explore-search-bar-sub-menu
       ```
 
-      You will then see the changes reflected in your `package.json` file (read with `cat package.json`)!
+      You can confirm that the dependency has been installed in your `package.json` file, under dependencies!
 
-      ```js
+      ```sh
+      /app/primo-explore/custom/NYU # cat package.json
+      
       {
         "name": "primo-explore-nyu",
         "version": "1.0.0",
@@ -84,7 +91,10 @@ One common way of delivering and using other institutions' customizations is thr
         }
       }
       ```
-1. To implement this in your running development instance, we can [follow the module's documentation](primo-explore-search-bar-sub-menu)
+
+### Adding the customization to the interface
+
+To implement the search bar submenu in your running development instance, we can [follow the module's documentation](primo-explore-search-bar-sub-menu)
 
       ```js
       // Imports the module
