@@ -58,7 +58,7 @@ p {
 
 ### Installing a customization as an `npm` dependency
 
-One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations. The following steps will walk us through installing a customization that can be installed as an npm package.
+One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations: a submenu ADD MORE DESCRIPTION HERE ELLIOTT. The following steps will walk us through installing a customization that has been packaged for npm.
 
 1. From the command line, open an Alpine shell process in the Docker container as defined by the `web` service. Ensure your `custom` folder is mounted as a volume.
       ```sh
