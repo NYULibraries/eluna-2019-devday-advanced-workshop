@@ -1,14 +1,8 @@
 'use strict';
 var gulp = require('gulp');
-let glob = require('glob');
 let http = require('http');
 let https = require('https');
-let prompt = require('prompt');
 var config = require('../config');
-var extractor = require('css-color-extractor');
-var spawn = require('child_process').spawn;
-var exec = require('child_process').exec;
-var shell = require("shelljs");
 var fs = require('fs');
 
 gulp.task('css-colors', function () {
