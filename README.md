@@ -21,7 +21,7 @@ docker pull quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:e2e
       ```sh
       docker-compose build
       ```
-1. Run the container service
+1. Run the container service 
       ```sh
       # The 'up' command will deploy any dependent services,
       # and run with the service's ports enabled and mapped to the host.
@@ -141,7 +141,7 @@ VIEW=[VIEW] docker-compose run create-package
 
 For now, the `VIEW` value can be either `NYU` or `CENTRAL_PACKAGE`.
 
-### CircleCi account
+### CircleCI account
 
 Create an account at [circleci.com](https://circleci.com) using your Github account.
 
