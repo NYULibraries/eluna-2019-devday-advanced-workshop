@@ -56,7 +56,7 @@ p {
 }
 ```
 
-### Adding an `npm` dependency
+### Installing a customization as an `npm` dependency
 
 One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations. The following steps will walk us through installing a customization that can be installed as an npm package.
 
@@ -91,7 +91,10 @@ One common way of delivering and using other institutions' customizations is thr
         }
       }
       ```
-1. To implement this in your running development instance, we can [follow the module's documentation](primo-explore-search-bar-sub-menu)
+
+### Adding the customization to the interface
+
+To implement the search bar submenu in your running development instance, we can [follow the module's documentation](primo-explore-search-bar-sub-menu)
 
       ```js
       // Imports the module
