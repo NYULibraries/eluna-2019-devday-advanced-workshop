@@ -74,11 +74,11 @@ Install:
 * [yarn](https://yarnpkg.com/lang/en/docs/install/) for node dependency management
 * Google Chrome (latest version)
 * Cypress:
-      ```sh
-      yarn global add cypress
-      cypress verify
-      cypress open
-      ```
+```sh
+yarn global add cypress
+cypress verify
+cypress open
+```
 * Create an account at [circleci.com](https://circleci.com) using your Github account.
 
 ### More resources
