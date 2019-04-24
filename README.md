@@ -56,6 +56,33 @@ p {
 }
 ```
 
+### CircleCI account
+
+Create an account at [circleci.com](https://circleci.com) using your Github account.
+
+### Other local requirements
+
+Many applications that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`. We'll also need these dependencies locally installed in order to properly run the Cypress GUI.
+
+Recommended installation:
+* Node (>= version 8)
+* [Node Version Manager](https://github.com/creationix/nvm) for handling multiple versions of Node on your local machine (or, [nvm-windows](https://github.com/coreybutler/nvm-windows))
+* [yarn](https://yarnpkg.com/lang/en/docs/install/) for node dependency management
+
+    Once this is complete, you can simply run your `yarn` and `lerna` commands locally instead, since `yarn.lock` and `package.json` file generation is generally not platform-specific.
+
+    ```sh
+    # Now can be done locally!
+    cd primo-explore/custom/NYU
+    yarn add primo-explore-search-bar-sub-menu
+    ```
+
+* Google Chrome (latest version): Our section on end-to-end testing will use [cypress](https://www.cypress.io/), which utilizes Google Chrome for its testing GUI.
+* Try to make sure the Cypress GUI works: `yarn global add cypress`, `cypress verify`, and `cypress open`.
+
+
+If you would like to practice blah blah blah before the blah blah blah, feel free to try out the following tutorial:
+
 ### Installing a customization as an `npm` dependency
 
 One common way of delivering and using other institutions' customizations is through the [npm repository](http://npmjs.com/). Let's try adding one of these customizations: a submenu ADD MORE DESCRIPTION HERE ELLIOTT. The following steps will walk us through installing a customization that has been packaged for npm.
@@ -141,26 +168,4 @@ VIEW=[VIEW] docker-compose run create-package
 
 For now, the `VIEW` value can be either `NYU` or `CENTRAL_PACKAGE`.
 
-### CircleCI account
 
-Create an account at [circleci.com](https://circleci.com) using your Github account.
-
-### Other local requirements
-
-Many applications that you would need to do can now be run in the Docker container instead of on your local machine. However, there may be some processes that it would be more convenient to run locally. For example, you may want to run the development environment locally instead. To do this, I recommend installing `Node` to an LTS version. For better forward-compatibility, I have enforced a version requirement `>=8`. We'll also need these dependencies locally installed in order to properly run the Cypress GUI.
-
-Recommended installation:
-* Node (>= version 8)
-* [Node Version Manager](https://github.com/creationix/nvm) for handling multiple versions of Node on your local machine (or, [nvm-windows](https://github.com/coreybutler/nvm-windows))
-* [yarn](https://yarnpkg.com/lang/en/docs/install/) for node dependency management
-
-    Once this is complete, you can simply run your `yarn` and `lerna` commands locally instead, since `yarn.lock` and `package.json` file generation is generally not platform-specific.
-
-    ```sh
-    # Now can be done locally!
-    cd primo-explore/custom/NYU
-    yarn add primo-explore-search-bar-sub-menu
-    ```
-
-* Google Chrome (latest version): Our section on end-to-end testing will use [cypress](https://www.cypress.io/), which utilizes Google Chrome for its testing GUI.
-* Try to make sure the Cypress GUI works: `yarn global add cypress`, `cypress verify`, and `cypress open`.
