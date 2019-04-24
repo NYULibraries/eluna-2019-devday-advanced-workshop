@@ -1,17 +1,11 @@
 'use strict';
 
 let gulp = require('gulp');
-let zip = require('gulp-zip');
 let config = require('../config');
 let http = require('http');
 let https = require('https');
-let util = require('util');
 let browserSyncManager = require('../browserSyncManager');
 let primoProxy = require('../primoProxy');
-let glob = require('glob');
-let prompt = require('prompt');
-let runSequence = require('run-sequence');
-
 
 
 gulp.task('setup_watchers', ['select-view', 'watch-js', 'watch-custom-scss', 'watch-css'], () => {
