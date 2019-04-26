@@ -23,9 +23,7 @@ describe('primoExploreCustomSearchBarSubMenu component', () => {
       $buttons = $element.find('button');
     });
 
-    it('has two buttons', () => {
-      expect($buttons.length).toEqual(2);
-    });
+    it('has two buttons');
 
     it('each button has the appropriate description');
   });

@@ -21,9 +21,7 @@ describe('primoExploreCustomSearchBarSubMenu Controller', () => {
       controller.$onInit();
     });
 
-    it('assigns configuration items to controller.items', () => {
-      expect(controller.items).toEqual(searchBarSubMenuConfig.items);
-    });
+    it('assigns configuration items to controller.items');
 
     it('assigns configuration backgroundColor to the controller.backgroundColor');
   });
